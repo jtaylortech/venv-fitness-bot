@@ -76,7 +76,7 @@ def buildworkout():
                 session["cleanup"] = True
 
                 # logs the workout in the log -> DynamoDB
-                write_workout_to_dynamo("tutorial", session["workout_obj"])
+                write_workout_to_dynamo("fitness-bot", session["workout_obj"])
             elif msg == "lets do something else":
                 # build another workout
                 workout_obj, workout_msg = build_network()

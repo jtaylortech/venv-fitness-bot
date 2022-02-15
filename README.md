@@ -19,26 +19,26 @@
     - ``` python3 -m venv environment-name ```
 
 - Implement the Required Packages
-    - see requirements.txt file
+    - see `requirements.txt` file
 
 - Activate the Environment  </br>
     - ``` source environment-name/bin/activate ```
 - Install the Dependencies </br>
     - ``` pip3 install -r requirements.txt ```
 
-- Create __send_sms.py__ file for Twilio implementation
+- Create `__send_sms.py__` file for Twilio implementation
     - this file will be in accordance with the twilio walk though mentioned above
     - do not forget to run ``` pip install twilio ``` at the end 
 
 - Write the AWS Lambda Function 
-    - refer to __lambda_handler.py__ file
+    - refer to `__lambda_handler.py__` file
     - this will handle the messages
     - Flask is used to maintain the context of the conversation throughout the interaction
         - messages received -> Flask identifies the context -> proper response is kicked back
 
-- Create __exercise_inventory.json__ as your nonrelational database
+- Create `__exercise_inventory.json__` as your nonrelational database
     - this is used to hold your variety of categorical workouts to construct a full workout upon request
-    - this is needed to carry out the `build_workout` function in the __lambda.handler.py__ file 
+    - this is needed to carry out the `build_workout` function in the `__lambda.handler.py__` file 
     - the history of the workouts will be stored in AWS's DynamoDB
 
 - Set up the AWS Environment
@@ -50,9 +50,15 @@
     - since the code with be deployed to AWS as a Lambda function, Zappa is used to assist in this
         - Zappa will setup the leftover serverless infrastructure
             - includes: IAM roles, Lambda function, & API Gateway
-        - refer to __twilio-fit-iam-policy.json__ file
+        - refer to `__twilio-fit-iam-policy.json__` file
             - relevant documentation is located here: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html
-        -  create __zappa_settings.json__
+        -  create `__zappa_settings.json__`
             - this is the setup for the deployment configuration for Zappa
+            - update zappa as necessary
+
+- Deploy to the Cloud
+    - from the CLI
+        - enter `zappa deploy fitness-bot`
+            - "fitness-bot" is used here because that's the name given to the deployment in __zappa_settings.json__
         
 
