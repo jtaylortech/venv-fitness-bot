@@ -26,7 +26,7 @@
 - Install the Dependencies </br>
     - ``` pip3 install -r requirements.txt ```
 
-- Create __send_sms.py__ file
+- Create __send_sms.py__ file for Twilio implementation
     - this file will be in accordance with the twilio walk though mentioned above
     - do not forget to run ``` pip install twilio ``` at the end 
 
