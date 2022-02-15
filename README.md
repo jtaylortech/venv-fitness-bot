@@ -48,7 +48,11 @@
             - the primary key will be a partition key named "workout_user"
             - the sort key will be named "exercise_time"
     - since the code with be deployed to AWS as a Lambda function, Zappa is used to assist in this
+        - Zappa will setup the leftover serverless infrastructure
+            - includes: IAM roles, Lambda function, & API Gateway
         - refer to __twilio-fit-iam-policy.json__ file
             - relevant documentation is located here: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html
+        -  create __zappa_settings.json__
+            - this is the setup for the deployment configuration for Zappa
         
 

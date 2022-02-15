@@ -1,0 +1,10 @@
+{
+    "tutorial": {
+        "app_function": "lambda_handler.app",
+        "keep_warm": false,
+        "attach_policy": "twilio-fit-iam-policy.json",
+        "manage_roles": true,
+        "role_name": "twilio-fit-tutorial",
+        "runtime": "python3.6"
+    }
+}
