@@ -35,3 +35,20 @@
     - this will handle the messages
     - Flask is used to maintain the context of the conversation throughout the interaction
         - messages received -> Flask identifies the context -> proper response is kicked back
+
+- Create __exercise_inventory.json__ as your nonrelational database
+    - this is used to hold your variety of categorical workouts to construct a full workout upon request
+    - this is needed to carry out the `build_workout` function in the __lambda.handler.py__ file 
+    - the history of the workouts will be stored in AWS's DynamoDB
+
+- Set up the AWS Environment
+    - setup the AWS serverless infrastructure
+        - a DynamoDB database is required to carry out the `write_workout_to_dynamo` function
+            - name the table whatever you desire
+            - the primary key will be a partition key named "workout_user"
+            - the sort key will be named "exercise_time"
+    - since the code with be deployed to AWS as a Lambda function, Zappa is used to assist in this
+        - refer to __twilio-fit-iam-policy.json__ file
+            - relevant documentation is located here: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html
+        
+

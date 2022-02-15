@@ -1,0 +1,6 @@
+{
+    "DYNAMIC": ["Dumbell Jumping Jacks", "Mountain Climbers", "Kettlebell Swings", "Kettlebell Cleans", "Burpees"],
+    "UPPER": ["Pullups", "Dips", "Kettlebell Row", "Pushups", "Lateral Dumbell Raises"],
+    "LOWER": ["Dumbell Bulgarian Lunges", "Dumbell Goblet Squats", "Kettlebell Back Lunges"],
+    "CORE": ["Russian Twist", "Sit Ups", "Hanging Knee Raises", "Planks"]
+}

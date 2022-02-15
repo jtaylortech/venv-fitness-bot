@@ -75,7 +75,7 @@ def buildworkout():
                 session["response"] = "Bet! Make sure you tell JT how it went."
                 session["cleanup"] = True
 
-                # logs the workout in the log
+                # logs the workout in the log -> DynamoDB
                 write_workout_to_dynamo("tutorial", session["workout_obj"])
             elif msg == "lets do something else":
                 # build another workout
@@ -90,6 +90,7 @@ def buildworkout():
             session.pop("context")
             session.pop("cleanup")
 
+        # sends the text response
         resp = MessagingResponse()
         resp.message(session.get("response"))
 
