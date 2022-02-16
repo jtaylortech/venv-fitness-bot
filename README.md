@@ -55,10 +55,13 @@
         -  create `__zappa_settings.json__`
             - this is the setup for the deployment configuration for Zappa
             - update zappa as necessary
+            - update django as necessary
+            
 
 - Deploy to the Cloud
     - from the CLI
         - enter `zappa deploy fitness-bot`
             - "fitness-bot" is used here because that's the name given to the deployment in __zappa_settings.json__
+                - if changes are made, run `zappa update fitness-bot`
         
 

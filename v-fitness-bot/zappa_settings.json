@@ -1,5 +1,5 @@
 {
-    "fitness-bot": {
+    "dev-fitness": {
         "app_function": "lambda_handler.app",
         "keep_warm": false,
         "attach_policy": "twilio-fit-iam-policy.json",
@@ -8,3 +8,4 @@
         "runtime": "python3.6"
     }
 }
+
